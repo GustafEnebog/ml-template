@@ -1,5 +1,5 @@
-# Template for ML-repo
-Template for a Machine Learning Project Repository
+# Resources for README
+<span style="color: red;">The template starts further down, after this resource-section</span>
 
 <br>
 
@@ -10,40 +10,52 @@ This is my template that I use for my Machine Learning projects and it's perfect
 I have created a starting structure for the readme, prewrtitten Jupyter notebook cells, presinstalled tools, etc.
 I have also, before the start of the real part of the README, created some reources for your README and project in general.
 
-
-## How to use this repo
-
-1. Use this template to create your GitHub project repo
-
+## Use this template to create your GitHub project repo
 1. Log into your cloud IDE with your GitHub account.
+2. On your Dashboard, click on the "New Workspace" button.
+3. Paste in the URL you copied from this template at GitHub earlier (and click on the alternative).
+4. Click "Create".
+5. Wait for the workspace to open. This can take a few minutes.
 
-1. On your Dashboard, click on the New Workspace button
+## How to Fork a Repository
+1. Log into your GitHub account.
+2. Navigate to the repository page you want to fork.
+3. In the top-right corner of the page, click the "Fork" button.
+4. Choose where you want to fork the repository (either to your personal account or an organization).
+5. GitHub will create a copy of the repository in your account. Wait a few moments for the process to complete.
+6. Once the fork is complete, you can navigate to your newly forked repository and begin working on your own copy.
 
-1. Paste in the URL you copied from GitHub earlier
+## Instructions on Versions of Dependencies
+The listings in the `requirements.txt` file are provided without specific version numbers to ensure that you start with the latest versions of all dependencies (such as Python, Jupyter Notebook, Streamlit, Pandas, Scikit-learn, etc.). This approach allows you to always benefit from the most recent updates and improvements in the libraries.
 
-1. Click Create
+However, if you wish to "freeze" the versions throughout the project (which is often a good idea to prevent unexpected changes or issues caused by newer library versions), you should do the following:
 
-1. Wait for the workspace to open. This can take a few minutes.
+1. **Freeze Dependency Versions**  
+   You can freeze the versions of your dependencies by running the following command after installing them:
+   
+   `pip freeze > requirements.txt`
 
-1. Open a new terminal and `pip3 install -r requirements.txt`
+   This will generate a `requirements.txt` file that lists all the installed libraries along with their exact versions. By using this `requirements.txt`, you can ensure consistency across different environments, making it easier to replicate the setup without unexpected version issues.
 
-1. Open the jupyter_notebooks directory, and click on the notebook you want to open.
+2. **Updating Dependencies**  
+   Periodically, you may want to check for newer versions of your dependencies to keep your project up to date. To update all dependencies at once, you can use:
+   
+   `pip install --upgrade -r requirements.txt`
 
-1. Click the kernel button and choose Python Environments.
+3. **Handling Compatibility Issues**  
+   Sometimes, specific versions of libraries may not be compatible with each other. If you encounter any issues after freezing versions, it’s advisable to manually adjust the version numbers in the `requirements.txt` file to ensure compatibility. You can refer to the documentation of each library for guidance on compatible versions.
 
-## Instructions on versions of dependencies
+Additionally, **always update the Python version** in both the `gitpod/Dockerfile` and the `.python-version` file (if you're using a version manager like `pyenv`). This will ensure that the development environment uses the correct Python version and maintains consistency between different setups.
 
-The listing in the requirements-file are given without version number in order to start with the latest version of all dependencies (Python, Jupyter Notebook, streamlit, Pandas, Scikit-learn etc.). 
+By freezing dependencies and carefully managing versions, you help ensure that the project remains stable and reproducible across different machines and environments.
 
-If you want to "freeze" the version though out the project (often a good idea to prevent changes in new versions to mess up your code) you need to...XXXXXXXXXXxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.
-Remember also to always update the python version to the latest version in both the gitpoddockerfile and the python-version!
+## Machine Learning Resources
+[Machine Learning Resources](https://github.com/datascienceid/machine-learning-resources/blob/master/README.md)
 
-## On the topic of READMEs
-
-### Other README templates
+## Other README templates
 [awesome-readme](https://github.com/pottekkat/awesome-readme/blob/master/README-template.md)
 
-### Informative Articles on how to write a good README
+## Informative Articles on how to write a good README
 [How to write an Awesome README](https://towardsdatascience.com/how-to-write-an-awesome-readme-68bf4be91f8b)
 [Articles](https://github.com/trekhleb/homemade-machine-learning)
 [](https://github.com/pottekkat/awesome-readme/tree/master)
@@ -52,7 +64,7 @@ Remember also to always update the python version to the latest version in both 
 []()
 []()
 
-### Examples of good READMEs
+## Examples of good READMEs
 [homemade-machine-learning](https://github.com/trekhleb/homemade-machine-learning)
 []()
 []()
@@ -60,33 +72,142 @@ Remember also to always update the python version to the latest version in both 
 []()
 []()
 
-### Principles of a good README (in no particular order)
+## Principles of a Good README (in no particular order)
+1. Prioritize Important Information
+Start with the most useful and essential information at the top. This allows readers to quickly understand the purpose and usage of your project. Gradually include more detailed technical or implementation notes as they progress through the file.
 
-ASCII and Unicode, capital letters come before lower-case, meaning that README will most often appear at the top of lists of files
+2. File Naming Conventions
+Use ASCII and Unicode characters appropriately. Remember that capital letters appear before lowercase letters in sorting, so "README" will often appear at the top of file listings. This ensures visibility.
 
-start your README file with the most useful information and then gradually work your way down to the technical details.
+3. Know Your Audience
+Who is your documentation for? A good README is written for your team, collaborators, and potential users who might interact with your code. Ensure it’s clear, concise, and accessible to people with varying levels of technical knowledge.
 
-Who the documentation is for ?
+4. The Importance of Documentation
+Documentation is key for efficient collaboration. It helps both current collaborators and future developers understand the codebase, facilitating smoother development and troubleshooting. Over time, you or your team might forget the reasoning behind certain decisions, and good documentation can help recall the thought process that shaped the code.
 
-The documentation are intended for you, your coworkers and  the other  users who might be using your code.
+5. The Role of the README
+The README serves as the first point of contact for anyone visiting your project. It helps users understand what the project is about, how to get started, and how to contribute. A well-written README can increase adoption and contribution, as users are more likely to engage with projects that are clearly explained.
 
-Why Documentation ?
+6. Why You Should Care About a README
+Without a clear README, potential users and contributors might quickly become frustrated or confused. If they don’t know what your software does or how to use it, they’re unlikely to try it or contribute to its development.
 
-It helps collaborating efficient and easy. Plus after some time down the road, you yourselves would have forgotten the line of thinking, for why you did code the way you did. Documentation helps you remember  your line of thinking, not only to yourselves but others too.
+Additional Principles for a Good README:
+7. Clarity and Simplicity
+Keep language simple and free from jargon. Aim for clarity so that users of all skill levels can easily follow the instructions. Avoid overcomplicating explanations—assume that the reader might not be familiar with your codebase or the technologies you're using.
 
-Why README ?
+8. Be Concise but Complete
+Strike a balance between brevity and thoroughness. Include essential information without overwhelming readers with unnecessary details. A good README should provide enough context to get someone up and running, without drowning them in too much information.
 
-It helps anyone who first visits your project to get up to the speed, up and running.
+9. Structure and Organization
+A well-structured README improves readability and helps users find the information they need. Consider dividing the document into clear sections with headings such as:
 
-If people don’t know what your software does, then they won’t use it or contribute to it
+Project Title
+Description
+Installation Instructions
+Usage
+Contributing
+License
+Acknowledgements
 
-### Good word to use
-Succinct
-Verbose
+10. Use Visuals When Necessary
+Incorporating images, GIFs, or diagrams can greatly enhance understanding, especially when explaining complex concepts, workflows, or user interfaces. Make sure visuals are relevant and add value.
 
-### Markdown (syntax that covers your basic README-needs)
+11. Provide Example Use Cases
+Including code examples and use cases helps users understand how to apply the software in real-life scenarios. Show how to run basic commands, configure settings, or integrate with other tools.
 
-#### Headings
+12. Maintenance and Contribution Information
+Encourage collaboration by including guidelines for contributing to the project. Specify how people can report issues, submit pull requests, or help with documentation.
+
+13. Keep It Up to Date
+A README is a living document that should evolve alongside your project. Keep it updated as your project progresses, particularly when there are changes to setup instructions, new features, or changes in functionality.
+
+14. Add a License
+Include a section detailing the project's license. This clarifies the terms under which others can use, modify, or distribute your code, which is essential for open-source projects.
+
+## ML-Concepts
+
+| **Concept**                         | **Synonyms**                                 | **Explanation**                                                                                   |
+|-------------------------------------|----------------------------------------------|---------------------------------------------------------------------------------------------------|
+| **Anomaly Detection**               | Outlier Detection                           | The process of identifying rare or unusual patterns in data that do not conform to expected behavior. |
+| **API (Application Programming Interface)** | -                                            | A set of rules that allows one software application to communicate with another.                   |
+| **API Endpoint**                    | Model Interface                             | A specific URL or address where an API can access resources or services.                         |
+| **Bias**                            | Systematic Error                            | A systematic error in the model that leads to inaccurate predictions due to incorrect assumptions.  |
+| **Confusion Matrix Metrics**        | Precision, Recall                           | Metrics used to evaluate classification models, derived from a confusion matrix.                   |
+| **Confusion Matrix**                | Error Matrix                                | A table used to evaluate the performance of a classification model, showing true vs predicted values. |
+| **Dockerization**                   | Containerization for ML Models              | The process of packaging an application and its dependencies into a container for easy deployment. |
+| **Early Stopping**                  | Halting Criterion                           | A regularization technique that stops training when performance on a validation set starts to degrade. |
+| **Epoch**                           | Iteration                                    | A single pass through the entire training dataset in an iterative model training process.          |
+| **Evaluation**                      | Testing, Assessment                         | The process of assessing a model's performance using various metrics.                              |
+| **F1 Score**                        | F-Measure                                    | A metric that balances precision and recall, useful in imbalanced class problems.                  |
+| **Feature Importance**              | Variable Importance                         | A technique that identifies the most important features contributing to the model’s predictions.    |
+| **Feature Selection**               | Attribute Selection                         | The process of selecting a subset of relevant features for use in model training.                   |
+| **Framework (TensorFlow, PyTorch, Keras)** | -                                            | Pre-built libraries and tools that assist in developing machine learning models.                   |
+| **Hyperparameters**                 | Tuning Parameters                           | Parameters that control the training process and model architecture, set before training begins.    |
+| **Inference**                       | Prediction, Output                          | The process of making predictions using a trained model on new, unseen data.                       |
+| **Labels**                          | Targets, Outputs, Dependent Variables       | The target values or outcomes that the model is trying to predict in supervised learning tasks.     |
+| **Learning Rate**                   | Step Size                                   | A hyperparameter that controls how much the model's weights are adjusted during training.          |
+| **Loss Function**                   | Cost Function, Objective Function           | A function that calculates the difference between the model's predictions and the true values.     |
+| **Metrics**                         | Evaluation Criteria                         | Quantitative measures used to assess model performance during evaluation.                          |
+| **Model Architecture**              | Network Structure                           | The structure or design of a machine learning model, including its layers and their configuration.  |
+| **Model Serialization**             | Model Saving, Pickling                      | The process of saving a trained model so that it can be reused or deployed later.                  |
+| **Model Versioning**                | Model Management                            | The practice of keeping track of different versions of models as they evolve.                      |
+| **Model Setup**                     | Architecture, Hyperparameters               | The initial configuration and setup of a machine learning model, including architecture and hyperparameters. |
+| **Model Testing**                   | Cross-validation, Metrics Evaluation        | The process of evaluating the model using a test dataset or cross-validation.                       |
+| **Model Output**                    | Prediction, Inference                       | The result produced by the model after making a prediction.                                        |
+| **Model Hyperparameters**           | Learning Rate, Epochs                       | The parameters that are set before the training of the model, such as the learning rate and epochs. |
+| **Normalization**                   | Standardization                             | The process of scaling features so that they have a mean of 0 and a standard deviation of 1.       |
+| **Optimizer**                       | Optimization Algorithm                      | An algorithm used to minimize the loss function by adjusting model parameters.                      |
+| **Outliers**                        | Anomalies, Noise                            | Data points that are significantly different from other data points in the dataset.                |
+| **Overfitting**                     | High Bias                                   | A situation where the model learns the training data too well, including noise, and performs poorly on new data. |
+| **Pipeline**                        | Workflow                                    | A series of steps or stages in a machine learning workflow to automate the model training process.  |
+| **Regularization**                  | Penalty Term                                | A technique used to prevent overfitting by adding a penalty term to the loss function.              |
+| **Robustness**                      | -                                            | The ability of a model to maintain its performance despite changes in the data or environment.      |
+| **Sigmoid**                         | Logistic Sigmoid                            | A mathematical function often used in binary classification models to produce probabilities.        |
+| **Softmax**                         | Exponential Normalizer                       | A function that converts a vector of raw scores into a probability distribution in multi-class classification. |
+| **Standardization**                 | Z-Score Normalization                       | The process of rescaling features to have zero mean and unit variance, often used in machine learning. |
+| **Succinct**                        | -                                            | Clear and concise, typically referring to explanations or models.                                   |
+| **Test Set**                        | Test Data, Evaluation Data                  | A subset of the data used to evaluate the model after training to assess its performance.          |
+| **Training**                        | Learning, Fitting                           | The process of using data to adjust the model’s parameters.                                       |
+| **Training Procedure**              | Learning Pipeline                           | The series of steps involved in training a machine learning model, including data handling and optimization. |
+| **Training Set**                    | Training Data, Learning Data               | The portion of the data used to train the model.                                                   |
+| **Validation Set**                  | Dev Set                                     | A subset of data used to tune model parameters and evaluate performance during training.            |
+| **Variance**                        | Random Error                                | The amount by which the model's predictions would change if trained on a different dataset.        |
+| **Verbose**                         | -                                            | Opposite to Verbose.        |
+| **Version Control**                 | Git, Model Versioning                       | The practice of tracking changes to models or code, often using tools like Git.                    |
+
+<br>
+
+## The Process of a ML-Project
+
+| **Step**                          | **Activities/Tasks**                                                                 | **Methods and Algorithms**                                               |
+|------------------------------------|--------------------------------------------------------------------------------------|-------------------------------------------------------------------------|
+| **1. Define the Problem**          | - Understand the business problem or objective.                                      | - No specific algorithms; requires domain knowledge and problem framing.|
+|                                    | - Define the goals of the machine learning project.                                  |                                                                         |
+| **2. Collect and Prepare Data**    | - Gather relevant data from various sources.                                         | - Web scraping, APIs, Database queries.                                |
+|                                    | - Clean and preprocess data (handle missing values, remove duplicates, etc.).        | - Imputation, Filtering, Normalization, Data Augmentation.              |
+|                                    | - Feature selection or engineering.                                                  | - PCA (Principal Component Analysis), Feature Selection algorithms.     |
+| **3. Split the Data**              | - Split the data into training, validation, and test sets.                           | - Random Split, Stratified Split, K-fold Cross-Validation.             |
+| **4. Select the Model**            | - Choose an appropriate model (e.g., regression, classification, clustering, etc.).   | **Supervised Learning:** <br> - Linear Regression, Logistic Regression, Decision Trees, SVM (Support Vector Machines), KNN (K-Nearest Neighbors), Naive Bayes, Random Forest, Gradient Boosting (XGBoost, LightGBM), Neural Networks, Ridge and Lasso Regression. <br> **Unsupervised Learning:** <br> - K-Means Clustering, Hierarchical Clustering, DBSCAN, PCA (Principal Component Analysis), ICA (Independent Component Analysis), t-SNE (t-distributed Stochastic Neighbor Embedding), Gaussian Mixture Model (GMM). |
+| **5. Train the Model**             | - Feed the training data to the model.                                               | - Supervised learning (e.g., Gradient Descent, Batch Training).        |
+|                                    | - Tune model hyperparameters.                                                        | - Grid Search, Random Search, Hyperparameter Tuning Algorithms.        |
+| **6. Evaluate the Model**          | - Use validation data to evaluate model performance.                                 | - Accuracy, Precision, Recall, F1 Score, ROC Curve, Confusion Matrix.  |
+|                                    | - Check metrics like accuracy, precision, recall, F1 score, etc.                     | - Cross-Validation, AUC, RMSE, MAE (Mean Absolute Error).              |
+| **7. Tune the Model**              | - Optimize model by adjusting hyperparameters.                                       | - Hyperparameter optimization, Regularization (L1/L2), Grid Search.   |
+|                                    | - Apply cross-validation if necessary.                                              | - Randomized Search, Bayesian Optimization.                             |
+| **8. Test the Model**              | - Test the model on unseen data (test set).                                           | - Performance evaluation, Out-of-Sample testing.                       |
+|                                    | - Assess the generalization ability of the model.                                    | - Test Error, Overfitting Check.                                       |
+| **9. Interpret the Results**       | - Interpret model output and insights.                                               | - SHAP (Shapley values), LIME, Partial Dependence Plots.                |
+|                                    | - Validate the model's predictions with business goals.                              | - Feature Importance, Sensitivity Analysis.                             |
+| **10. Deploy the Model**           | - Deploy the model into production.                                                  | - REST API, Cloud Services (AWS, GCP, Azure), Docker Containers.       |
+|                                    | - Integrate it with the application or system.                                       | - Model Deployment Pipelines, Continuous Integration/Deployment (CI/CD). |
+| **11. Monitor and Maintain**       | - Monitor the model's performance over time.                                         | - Monitoring tools, Drift Detection, Real-time Monitoring.             |
+|                                    | - Update the model as new data is collected or the business environment changes.      | - Retraining, Transfer Learning, Model Versioning.                     |
+
+<br>
+
+## Markdown (syntax that covers your basic README-needs)
+
+### Headings
 # Heading 1
 ## Heading 2
 ### Heading 3
@@ -94,51 +215,52 @@ Verbose
 ##### Heading 5
 ###### Heading 6
 
-#### Separators  
+### Separators  
 You may use *, - or _; it make no difference.
 
 ---
 
-#### Empty row
+### Empty row
 <br>
 
-#### Bulleted items  
+### Bulleted items  
 You may use *, - or +; it make no difference.
 - First level item
   - Second level item
     - Third level item
 
-#### Bold and italics
+### Bold and italics
 You may use **, __; it make no difference.  
+
 **Bold**  
 You may use *, _; it make no difference.  
 *italics*  
 You may use ** and * or_; it make no difference.  
 ***Bold and Italic***  
 
-#### Strikethrough
+### Strikethrough
 ~~text~~
 
-#### Colored text
+### Colored text
 <span style="color: red;">This is red text</span>
 
-#### Superscript
+### Superscript
 Normal text<sup>sup text</sup>
 
-#### Subscript
+### Subscript
 Normal text<sub>sub text</sub>
 
-#### Escape characters
+### Escape characters
 Syntax: \
 Example: To escape a special character like *, use \* → \*escaped text\* will show as *escaped text*.
 
-#### Links
+### Links
 [Google](https://www.google.com)
 []()
 
-#### Background color
+### Background color
 
-#### Tables
+### Tables
 | Header 1 | Header 2 | Header 3 |
 |----------|----------|----------|
 | Row 1    | Data     | More data|
@@ -147,7 +269,7 @@ Example: To escape a special character like *, use \* → \*escaped text\* will 
 
 []()
 
-#### Images
+### Images
 Use jpg for: photographs and complex images with gradients and many colors.
 Use png for: simple images (e.g. logos/icons), graphics and images with transparency.
 ![Alt text](https://url-to-image.com/image.png)
@@ -155,65 +277,65 @@ link to images:
 [![Image](https://url-to-image.com/image.png)](https://link-to-page.com)
 []()
 
-#### Hide stuff
+### Hide stuff
 <details><summary>Click to expand</summary>Content here</details>
 
-#### Code
+### Code
 inline code: `this is code`
 Code blocks: <pre> ```python def hello(): print("Hello World") ``` </pre>
 []()
 
-#### Blockquotes
+### Blockquotes
 > This is a blockquote.
 
-#### Emojis
+### Emojis
 :sparkles: :rocket:
 []()
 
-#### Equations
+### Equations
 LaTeX (MathJax)
 Use lightweight KaTeX if performance and fast rendering is an issue 
 $E = mc^2$
 
-##### Inline
+### Inline
 This is an inline equation: $E = mc^2$.
 
-#### Block Math (Centered Equation)
+### Block Math (Centered Equation)
 $$
 E = mc^2
 $$
 
-#### Fractions
+### Fractions
 $$
 \frac{a}{b} = c
 $$
 
-#### Exponents
+### Exponents
 $$
 x^2 + y^2 = z^2
 $$
 
-#### Subscripts
+### Subscripts
 $$
 a_1 + a_2 = b_1
 $$
 
-#### Squareroot
+### Squareroot
 $$
 \sqrt{x^2 + y^2}
 $$
 
-#### Summation
+### Summation
 $$
 \sum_{i=1}^{n} i
 $$
 
-#### Integrals
+### Integrals
 $$
 \int_0^\infty e^{-x^2} \, dx
 $$
 
-#### Matrices
+### Matrices
 $$
 \begin{bmatrix} 
 1 & 2 \\
@@ -221,24 +343,238 @@ $$
 \end{bmatrix}
 $$
 
-#### Greek letters
+### Greek letters
 $$
 \alpha + \beta = \gamma
 $$
 
-#### Aligning Equations
+### Aligning Equations
 $$
 x^2 + y^2 = z^2 \\
 a^2 + b^2 = c^2
 $$
 
-#### Operators and Functions
+### Operators and Functions
 $$
 \sin(\theta) + \cos(\theta) = 1
 $$
 
-### Machine Learning Resources
-[Machine Learning Resources](https://github.com/datascienceid/machine-learning-resources/blob/master/README.md)
+# Commit Message Guidelines
+Here are some basic principles for writing good commit messages:
+
+- **Use the imperative mood**: Start the message with a verb (e.g., "Add", "Fix", "Update"), as if you are giving a command.
+- **Be concise**: The message should be succinct but informative. Aim for the title (or subject) to be under 50 characters.
+- **Provide context**: The body (if needed) should explain why the change was made and what exactly was done.
+- **Separate subject and body**: If the commit requires a longer explanation, separate the subject line from the body with a blank line. Limit each line of the body to 72 characters.
+- **Group related changes**: A single commit should focus on one logical change or fix.
+
+## Common Categories of Commit Messages
+Here are some common categories for commit messages, along with templates and examples:
+
+### 1. Initial Commit
+- **Template**: Initial commit of the project
+- **Example**: Initial commit with project setup, README, and gitignore
+
+### 2. Adding New Features
+- **Template**: Add `<feature>`
+- **Example**: Add data preprocessing pipeline
+- **Body (if necessary)**: Describe the major components of the feature, like functions or classes added.
+
+### 3. Bug Fixes
+- **Template**: Fix `<issue/bug description>`
+- **Example**: Fix issue where model training would fail with empty data
+- **Body**: Include details about the specific bug and how it was fixed.
+
+### 4. Refactoring
+- **Template**: Refactor `<area or component>`
+- **Example**: Refactor data loader class to improve performance
+- **Body**: Describe the purpose of the refactor and any improvements.
+
+### 5. Updating Dependencies
+- **Template**: Update `<dependency>` to version `<version>`
+- **Example**: Update numpy to version 1.21.0
+- **Body**: If relevant, describe why this update was necessary.
+
+### 6. Improvement
+- **Template**: Improve `<area or feature>`
+- **Example**: Improve model performance by tuning hyperparameters
+- **Body**: Explain the improvements made (e.g., increased accuracy by 5%).
+
+### 7. Testing
+- **Template**: Add `<tests or test details>`
+- **Example**: Add unit tests for data preprocessing pipeline
+- **Body**: Describe what the tests cover and their purpose.
+
+### 8. Documentation
+- **Template**: Update `<documentation/README>` for `<feature or functionality>`
+- **Example**: Update README to include model training instructions
+- **Body**: Mention what specific sections were added or updated.
+
+### 9. Fixing Typos/Minor Edits
+- **Template**: Fix typo in `<file>` or `<area>`
+- **Example**: Fix typo in README
+- **Body**: Provide details about the typo or small correction.
+
+### 10. Performance Optimization
+- **Template**: Optimize `<component>` for performance
+- **Example**: Optimize model evaluation function to reduce runtime
+- **Body**: Explain what was optimized and its impact on performance.
+
+
+# Commit Series for ML Project
+1. Initial Commit  
+   `Initial commit with project setup, README, and gitignore`
+
+2. Setting up Virtual Environment  
+   `Set up Python virtual environment and install dependencies`
+
+3. Add Data Collection Script  
+   `Add script to collect and store sentiment analysis dataset`
+
+4. Add Data Preprocessing Script  
+   `Add data preprocessing pipeline for text cleaning`
+
+5. Add Exploratory Data Analysis (EDA)  
+   `Add exploratory data analysis script for dataset insights`
+
+6. Refactor Data Preprocessing Pipeline  
+   `Refactor data preprocessing pipeline for scalability and speed`
+
+7. Add Feature Engineering  
+   `Add feature engineering steps for text vectorization (TF-IDF)`
+
+8. Add Initial Model Training  
+   `Add initial model training with Logistic Regression`
+
+9. Fix Bug in Data Preprocessing  
+   `Fix bug in text preprocessing that caused empty input data`
+
+10. Improve Model Performance  
+    `Improve model accuracy by tuning regularization parameter`
+
+11. Add Cross-Validation  
+    `Add 5-fold cross-validation to model training pipeline`
+
+12. Add Hyperparameter Search  
+    `Add hyperparameter search using GridSearchCV`
+
+13. Fix Bug in Model Evaluation  
+    `Fix bug in model evaluation function that caused incorrect accuracy`
+
+14. Refactor Model Evaluation Code  
+    `Refactor model evaluation code for better readability and maintainability`
+
+15. Update README with Model Training Instructions  
+    `Update README to include model training instructions`
+
+16. Add Unit Tests for Data Preprocessing  
+    `Add unit tests for data preprocessing pipeline`
+
+17. Fix Typos in README  
+    `Fix typos in README file`
+
+18. Update Dependencies  
+    `Update scikit-learn to version 1.1.0`
+
+19. Add Model Saving Functionality  
+    `Add function to save trained model to disk`
+
+20. Add Model Loading Functionality  
+    `Add function to load saved model for inference`
+
+21. Improve Model Inference Speed  
+    `Optimize model inference speed by reducing input size`
+
+22. Add Inference Script  
+    `Add script to make predictions using trained model`
+
+23. Add Web Interface for Predictions  
+    `Add simple Flask web app for model predictions`
+
+24. Fix Bug in Flask App  
+    `Fix bug in Flask app where model would crash on invalid input`
+
+25. Refactor Web App Code  
+    `Refactor Flask app code to improve structure and clarity`
+
+26. Improve Web Interface UX  
+    `Improve web interface UX with clearer input instructions`
+
+27. Add Logging for Web App  
+    `Add logging functionality to Flask app for debugging`
+
+28. Update README with Deployment Instructions  
+    `Update README to include instructions for deploying web app`
+
+29. Add Docker Support  
+    `Add Dockerfile for containerizing web app`
+
+30. Fix Docker Build Issues  
+    `Fix issues with Dockerfile preventing successful image build`
+
+31. Add Continuous Integration (CI) Setup  
+    `Add GitHub Actions for continuous integration and testing`
+
+32. Add Unit Tests for Model Inference  
+    `Add unit tests for model inference function`
+
+33. Fix Broken Tests  
+    `Fix broken tests in data preprocessing module`
+
+34. Refactor Test Code  
+    `Refactor test code for clarity and consistency`
+
+35. Improve Model Accuracy  
+    `Improve model accuracy by incorporating n-grams in feature extraction`
+
+36. Fix Data Leakage Issue  
+    `Fix data leakage issue in model evaluation pipeline`
+
+37. Add Performance Benchmarks  
+    `Add performance benchmarks for model accuracy and runtime`
+
+38. Improve Model Robustness  
+    `Improve model robustness by adding noise to training data`
+
+39. Add Version Control for Model  
+    `Add version control for trained models using DVC`
+
+40. Update CI to Include Model Training  
+    `Update CI pipeline to include model training and testing`
+
+41. Add Model Comparison Analysis  
+    `Add script to compare model performance with baseline models`
+
+42. Fix Minor Bug in Feature Engineering  
+    `Fix bug in feature engineering where certain words were ignored`
+
+43. Improve Logging in Model Training  
+    `Improve logging in model training to capture hyperparameters and metrics`
+
+44. Add Documentation for Model Hyperparameters  
+    `Add documentation to explain model hyperparameters and their tuning`
+
+45. Refactor Feature Engineering Code  
+    `Refactor feature engineering code to support additional preprocessing steps`
+
+46. Fix Memory Leak in Model Training  
+    `Fix memory leak in model training loop by clearing unused variables`
+
+47. Add Model Evaluation Metrics  
+    `Add additional model evaluation metrics (precision, recall, F1 score)`
+
+48. Add Model Performance Visualization  
+    `Add visualizations for model performance (ROC curve, confusion matrix)`
+
+49. Update README with Evaluation Metrics  
+    `Update README to include model evaluation metrics and results`
+
+50. Prepare for Production Deployment  
+    `Prepare project for production deployment by finalizing code and documentation`
+
+
+<span style="color: red;">README TEMPLATE FOR MACHINE LEARNING PROJECTS STARTS BELOW. Feel free to delete this text as well as all the resources above (unless you want to keep them ofcourse).</span>
+
 
 <br>
 <br>
@@ -246,14 +582,7 @@ $$
 <br>
 <br>
 <br>
-
-# THE REAL README TEMPLATE STARTS BELOW. You can safely delete this text and everything above for your readme (when you have read it)!
-
-
-
-
-
-
+<br>
 
 
 <div style="text-align: right;">
@@ -265,7 +594,6 @@ Introductory text
 
 
 ## Table of Contents
-
 - [Dataset Content](#dataset-content)
 - [Business Requirements](#business-requirements)
 - [Hypothesis and how to validate?](#hypothesis-and-how-to-validate?)
@@ -277,45 +605,6 @@ Introductory text
 - [Main Data Analysis and Machine Learning Libraries](#main-data-analysis-and-machine-learning-libraries)
 - [Credits](#credits)
 - [Acknowledgements](#acknowledgements)
-
-
-Introduction/Overview
- Project Background
- Problem Statement
- Project Objectives
-Dataset Overview
- Dataset Content
- Data Preprocessing
-Business Requirements
-Hypothesis and Validation
-Rationale for Mapping Business Requirements to Visualizations and ML Tasks
-ML Business Case
-Modeling Approach
- Model Selection
- Hyperparameter Tuning
- Model Evaluation
-Results and Evaluation
- Model Performance Metrics
- Comparison of Models
-Dashboard Design
-Unfixed Bugs
-Deployment
-Main Data Analysis and Machine Learning Libraries
-Ethical Considerations
- Ethical Impact
- Bias and Fairness
- Data Privacy and Security
-Scalability and Future Work
- Future Work
- Model Improvement
- Scalability Considerations
-Installation/Setup Instructions
- Requirements
- Setup Instructions
- Running the Project
-Credits
-Acknowledgements
-References
 
 
 ## Dataset Content - OPTIONAL
@@ -378,7 +667,6 @@ References
 - The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
 
 ### Media
-
 - The photos used on the home and sign-up page are from This Open-Source site
 - The images used for the gallery page were taken from this other open-source site
 
