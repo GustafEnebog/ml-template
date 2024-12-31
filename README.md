@@ -359,7 +359,88 @@ $$
 \sin(\theta) + \cos(\theta) = 1
 $$
 
-# Commit Message Guidelines
+## Common Error metrics
+
+### 1. Mean Absolute Error (MAE)
+$$
+\text{MAE} = \frac{1}{n} \sum_{i=1}^{n} |y_i - \hat{y}_i|
+$$
+
+---
+
+### 2. Mean Squared Error (MSE)
+$$
+\text{MSE} = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2
+$$
+
+---
+
+### 3. Root Mean Squared Error (RMSE)
+$$
+\text{RMSE} = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2}
+$$
+
+---
+
+### 4. R-squared (R²)
+$$
+R^2 = 1 - \frac{\sum_{i=1}^{n} (y_i - \hat{y}_i)^2}{\sum_{i=1}^{n} (y_i - \bar{y})^2}
+$$
+
+---
+
+### 5. Mean Absolute Percentage Error (MAPE)
+$$
+\text{MAPE} = \frac{1}{n} \sum_{i=1}^{n} \left| \frac{y_i - \hat{y}_i}{y_i} \right| \times 100
+$$
+
+---
+
+### 6. Explained Variance Score
+$$
+\text{Explained Variance Score} = 1 - \frac{\text{Var}(y - \hat{y})}{\text{Var}(y)}
+$$
+
+---
+
+### 7. Logarithmic Loss (Log Loss)
+$$
+\text{Log Loss} = - \frac{1}{n} \sum_{i=1}^{n} \left[y_i \log(\hat{y}_i) + (1 - y_i) \log(1 - \hat{y}_i)\right]
+$$
+
+---
+
+### 8. Confusion Matrix Components (for classification)
+$$
+\begin{bmatrix} 
+TP & FN \\
+FP & TN
+\end{bmatrix}
+$$
+Where:
+- TP = True Positive
+- FN = False Negative
+- FP = False Positive
+- TN = True Negative
+
+---
+
+### 9. Accuracy (for classification)
+$$
+\text{Accuracy} = \frac{TP + TN}{TP + TN + FP + FN}
+$$
+
+---
+
+### 10. Recall (Sensitivity or True Positive Rate)
+$$
+\text{Recall} = \frac{TP}{TP + FN}
+$$
+Where:
+- TP = True Positive
+- FN = False Negative
+
+## Commit Message Guidelines
 Here are some basic principles for writing good commit messages:
 
 - **Use the imperative mood**: Start the message with a verb (e.g., "Add", "Fix", "Update"), as if you are giving a command.
@@ -368,60 +449,60 @@ Here are some basic principles for writing good commit messages:
 - **Separate subject and body**: If the commit requires a longer explanation, separate the subject line from the body with a blank line. Limit each line of the body to 72 characters.
 - **Group related changes**: A single commit should focus on one logical change or fix.
 
-## Common Categories of Commit Messages
+### Common Categories of Commit Messages
 Here are some common categories for commit messages, along with templates and examples:
 
-### 1. Initial Commit
+#### 1. Initial Commit
 - **Template**: Initial commit of the project
 - **Example**: Initial commit with project setup, README, and gitignore
 
-### 2. Adding New Features
+#### 2. Adding New Features
 - **Template**: Add `<feature>`
 - **Example**: Add data preprocessing pipeline
 - **Body (if necessary)**: Describe the major components of the feature, like functions or classes added.
 
-### 3. Bug Fixes
+#### 3. Bug Fixes
 - **Template**: Fix `<issue/bug description>`
 - **Example**: Fix issue where model training would fail with empty data
 - **Body**: Include details about the specific bug and how it was fixed.
 
-### 4. Refactoring
+#### 4. Refactoring
 - **Template**: Refactor `<area or component>`
 - **Example**: Refactor data loader class to improve performance
 - **Body**: Describe the purpose of the refactor and any improvements.
 
-### 5. Updating Dependencies
+#### 5. Updating Dependencies
 - **Template**: Update `<dependency>` to version `<version>`
 - **Example**: Update numpy to version 1.21.0
 - **Body**: If relevant, describe why this update was necessary.
 
-### 6. Improvement
+#### 6. Improvement
 - **Template**: Improve `<area or feature>`
 - **Example**: Improve model performance by tuning hyperparameters
 - **Body**: Explain the improvements made (e.g., increased accuracy by 5%).
 
-### 7. Testing
+#### 7. Testing
 - **Template**: Add `<tests or test details>`
 - **Example**: Add unit tests for data preprocessing pipeline
 - **Body**: Describe what the tests cover and their purpose.
 
-### 8. Documentation
+#### 8. Documentation
 - **Template**: Update `<documentation/README>` for `<feature or functionality>`
 - **Example**: Update README to include model training instructions
 - **Body**: Mention what specific sections were added or updated.
 
-### 9. Fixing Typos/Minor Edits
+#### 9. Fixing Typos/Minor Edits
 - **Template**: Fix typo in `<file>` or `<area>`
 - **Example**: Fix typo in README
 - **Body**: Provide details about the typo or small correction.
 
-### 10. Performance Optimization
+#### 10. Performance Optimization
 - **Template**: Optimize `<component>` for performance
 - **Example**: Optimize model evaluation function to reduce runtime
 - **Body**: Explain what was optimized and its impact on performance.
 
 
-# Commit Series for ML Project
+## Commit Series for ML Project
 1. Initial Commit  
    `Initial commit with project setup, README, and gitignore`
 
@@ -573,16 +654,20 @@ Here are some common categories for commit messages, along with templates and ex
     `Prepare project for production deployment by finalizing code and documentation`
 
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
 <span style="color: red;">README TEMPLATE FOR MACHINE LEARNING PROJECTS STARTS BELOW. Feel free to delete this text as well as all the resources above (unless you want to keep them ofcourse).</span>
 
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
+
 
 
 <div style="text-align: right;">
