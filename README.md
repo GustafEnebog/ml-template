@@ -11,11 +11,12 @@ I have created a starting structure for the readme, prewrtitten Jupyter notebook
 I have also, before the start of the real part of the README, created some reources for your README and project in general.
 
 ## Use this template to create your GitHub project repo
-1. Log into your cloud IDE with your GitHub account.
-2. On your Dashboard, click on the "New Workspace" button.
-3. Paste in the URL you copied from this template at GitHub earlier (and click on the alternative).
-4. Click "Create".
-5. Wait for the workspace to open. This can take a few minutes.
+1. **Go to the Template Repository**: Navigate to this template repository on GitHub.  
+2. **Click "Use this template"**: At the top-right of the template repo page, click the green **"Use this template"** button.  
+3. **Create the New Repository**: 
+    - Enter a name for the new repository.
+    - Optionally, add a description and select the visibility (Public or Private).
+    - Click **"Create repository from template"**.
 
 ## How to Fork a Repository
 1. Log into your GitHub account.
