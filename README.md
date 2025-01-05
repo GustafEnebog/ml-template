@@ -206,6 +206,44 @@ Include a section detailing the project's license. This clarifies the terms unde
 
 <br>
 
+## Common ML-algorithms
+
+| Algorithm                  | Type of Learning          | Type of Problem        | Hyperparameters & Guidelines                           | Evaluation Frequency & Guidelines                                    | Evaluation Methods                                         |
+|----------------------------|---------------------------|------------------------|--------------------------------------------------------|--------------------------------------------------------------------|------------------------------------------------------------|
+| **Linear Regression**       | Supervised                | Regression             | Learning Rate: 0.01 - 0.1; Regularization: 0.01 - 1.0 | After each run, check R²; Adjust learning rate if needed.         | R², Mean Squared Error (MSE)                               |
+| **Logistic Regression**     | Supervised                | Classification          | Learning Rate: 0.01 - 0.1; Regularization: 0.01 - 1.0 | After each run, evaluate accuracy; Adjust regularization if overfitting occurs. | Accuracy, Precision, Recall, F1-Score, Confusion Matrix   |
+| **Random Forest**           | Supervised                | Classification/Regression | n_estimators: 50 - 200; max_depth: 10 - 50; min_samples_split: 2 - 10 | Evaluate after 50-100 trees; Adjust `n_estimators` and `max_depth` based on performance. | Accuracy, Confusion Matrix, Feature Importance            |
+| **k-Nearest Neighbors (kNN)** | Supervised                | Classification/Regression | k: 3 - 20; distance metric: Euclidean or Manhattan     | After 10-20 evaluations, adjust k; Test different distance metrics. | Accuracy, Confusion Matrix, F1-Score                      |
+| **Support Vector Machine (SVM)** | Supervised            | Classification/Regression | C: 1 - 100; Kernel: linear, radial; Gamma: 0.01 - 0.1  | Evaluate after every run; Adjust `C` and `gamma` if needed.        | Accuracy, Precision, Recall, F1-Score, Confusion Matrix   |
+| **Decision Trees**          | Supervised                | Classification/Regression | max_depth: 5 - 20; min_samples_split: 2 - 10            | After each model, adjust tree depth or minimum samples for better generalization. | Accuracy, Confusion Matrix, Feature Importance            |
+| **AdaBoost**                | Supervised                | Classification/Regression | n_estimators: 50 - 200; learning_rate: 0.01 - 0.1     | Evaluate after 50-100 runs, adjust `n_estimators` or `learning_rate` if necessary. | Accuracy, F1-Score, Confusion Matrix                      |
+| **k-Means Clustering**      | Unsupervised              | Clustering             | k: 2 - 10; max_iter: 100 - 300; initialization: k-means++ | Evaluate cluster cohesion; Re-run with different `k` values if the results are not meaningful. | Silhouette Score, Davies-Bouldin Index, Elbow Method     |
+| **DBSCAN**                  | Unsupervised              | Clustering             | eps: 0.5 - 1.0; min_samples: 5 - 50                     | Evaluate clustering by visualizing the clusters; Adjust `eps` and `min_samples` if necessary. | Silhouette Score, Davies-Bouldin Index, Visual Inspection |
+| **Hierarchical Clustering** | Unsupervised              | Clustering             | Linkage: Ward, single, complete; n_clusters: 2 - 10     | Evaluate cluster dendrogram and optimal number of clusters.       | Dendrogram, Silhouette Score, Davies-Bouldin Index       |
+
+<br>
+
+## Common evaluation methods of ML-algorithms
+
+| Evaluation Type          | Evaluation Method        | Description/Equation                                          | Typical Usage                   |
+|--------------------------|--------------------------|---------------------------------------------------------------|---------------------------------|
+| **Regression**            | **R² (Coefficient of Determination)** | Measures the proportion of variance in the dependent variable explained by the model. $ R² = 1 - \frac{SS_{res}}{SS_{tot}} $ | Linear Regression, Decision Trees (regression), etc. |
+| **Regression**            | **Mean Squared Error (MSE)** | Average of the squared differences between predicted and actual values. $ MSE = \frac{1}{n}\sum (y_{true} - y_{pred})^2 $ | Linear Regression, Random Forest (regression) |
+| **Classification**        | **Accuracy**             | Proportion of correct predictions. $ Accuracy = \frac{TP + TN}{TP + TN + FP + FN} $ | Logistic Regression, SVM, Random Forest (classification) |
+| **Classification**        | **Precision**            | Proportion of positive predictions that are correct. $ Precision = \frac{TP}{TP + FP} $ | Logistic Regression, SVM, kNN |
+| **Classification**        | **Recall**               | Proportion of actual positives correctly identified. $ Recall = \frac{TP}{TP + FN} $ | Logistic Regression, SVM, kNN |
+| **Classification**        | **F1-Score**             | Harmonic mean of Precision and Recall. $ F1 = 2 \cdot \frac{Precision \cdot Recall}{Precision + Recall} $ | Logistic Regression, SVM, kNN |
+| **Classification**        | **Confusion Matrix**     | Matrix showing counts of true positives, false positives, true negatives, and false negatives. | Logistic Regression, SVM, kNN |
+| **Clustering**            | **Silhouette Score**     | Measures how similar a point is to its own cluster compared to other clusters. Values range from -1 to 1. $ Silhouette = \frac{b - a}{\max(a, b)} $ | k-Means, DBSCAN, Hierarchical Clustering |
+| **Clustering**            | **Davies-Bouldin Index** | Measures the average similarity of each cluster with the one most similar to it. Lower values are better. $ DBI = \frac{1}{n} \sum \frac{s_i + s_j}{d_{ij}} $ | k-Means, DBSCAN, Hierarchical Clustering |
+| **Clustering**            | **Elbow Method**         | Determines optimal number of clusters by plotting sum of squared distances (inertia) vs. number of clusters. | k-Means |
+| **Clustering**            | **Dendrogram**           | Tree-like diagram showing cluster merges, used in hierarchical clustering. | Hierarchical Clustering |
+| **Classification/Regression** | **Log-Loss (Cross-Entropy)** | Measures the performance of a classification model where predictions are probabilities. $ LogLoss = -\frac{1}{n}\sum y_i \log(p_i) + (1 - y_i) \log(1 - p_i) $ | Logistic Regression, Neural Networks, Random Forest |
+| **Regression**            | **Root Mean Squared Error (RMSE)** | Square root of the average squared differences between predicted and actual values. $ RMSE = \sqrt{\frac{1}{n} \sum (y_{true} - y_{pred})^2} $ | Linear Regression, Random Forest (regression) |
+| **Classification**        | **AUC-ROC**              | Area Under the ROC Curve, measures model performance across all classification thresholds. | Logistic Regression, Random Forest, SVM |
+
+<br>
+
 ## Markdown (syntax that covers your basic README-needs)
 
 ### Headings
