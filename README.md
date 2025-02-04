@@ -129,52 +129,63 @@ Include a section detailing the project's license. This clarifies the terms unde
 
 | **Concept**                         | **Synonyms**                                 | **Explanation**                                                                                   |
 |-------------------------------------|----------------------------------------------|---------------------------------------------------------------------------------------------------|
-| **Anomaly Detection**               | Outlier Detection                           | The process of identifying rare or unusual patterns in data that do not conform to expected behavior. |
-| **API (Application Programming Interface)** | -                                            | A set of rules that allows one software application to communicate with another.                   |
-| **API Endpoint**                    | Model Interface                             | A specific URL or address where an API can access resources or services.                         |
-| **Bias**                            | Systematic Error                            | A systematic error in the model that leads to inaccurate predictions due to incorrect assumptions.  |
-| **Confusion Matrix Metrics**        | Precision, Recall                           | Metrics used to evaluate classification models, derived from a confusion matrix.                   |
-| **Confusion Matrix**                | Error Matrix                                | A table used to evaluate the performance of a classification model, showing true vs predicted values. |
-| **Dockerization**                   | Containerization for ML Models              | The process of packaging an application and its dependencies into a container for easy deployment. |
-| **Early Stopping**                  | Halting Criterion                           | A regularization technique that stops training when performance on a validation set starts to degrade. |
-| **Epoch**                           | Iteration                                    | A single pass through the entire training dataset in an iterative model training process.          |
-| **Evaluation**                      | Testing, Assessment                         | The process of assessing a model's performance using various metrics.                              |
-| **F1 Score**                        | F-Measure                                    | A metric that balances precision and recall, useful in imbalanced class problems.                  |
-| **Feature Importance**              | Variable Importance                         | A technique that identifies the most important features contributing to the model’s predictions.    |
-| **Feature Selection**               | Attribute Selection                         | The process of selecting a subset of relevant features for use in model training.                   |
-| **Framework (TensorFlow, PyTorch, Keras)** | -                                            | Pre-built libraries and tools that assist in developing machine learning models.                   |
-| **Hyperparameters**                 | Tuning Parameters                           | Parameters that control the training process and model architecture, set before training begins.    |
-| **Inference**                       | Prediction, Output                          | The process of making predictions using a trained model on new, unseen data.                       |
-| **Labels**                          | Targets, Outputs, Dependent Variables       | The target values or outcomes that the model is trying to predict in supervised learning tasks.     |
-| **Learning Rate**                   | Step Size                                   | A hyperparameter that controls how much the model's weights are adjusted during training.          |
-| **Loss Function**                   | Cost Function, Objective Function           | A function that calculates the difference between the model's predictions and the true values.     |
-| **Metrics**                         | Evaluation Criteria                         | Quantitative measures used to assess model performance during evaluation.                          |
-| **Model Architecture**              | Network Structure                           | The structure or design of a machine learning model, including its layers and their configuration.  |
-| **Model Serialization**             | Model Saving, Pickling                      | The process of saving a trained model so that it can be reused or deployed later.                  |
-| **Model Versioning**                | Model Management                            | The practice of keeping track of different versions of models as they evolve.                      |
-| **Model Setup**                     | Architecture, Hyperparameters               | The initial configuration and setup of a machine learning model, including architecture and hyperparameters. |
-| **Model Testing**                   | Cross-validation, Metrics Evaluation        | The process of evaluating the model using a test dataset or cross-validation.                       |
-| **Model Output**                    | Prediction, Inference                       | The result produced by the model after making a prediction.                                        |
-| **Model Hyperparameters**           | Learning Rate, Epochs                       | The parameters that are set before the training of the model, such as the learning rate and epochs. |
-| **Normalization**                   | Standardization                             | The process of scaling features so that they have a mean of 0 and a standard deviation of 1.       |
-| **Optimizer**                       | Optimization Algorithm                      | An algorithm used to minimize the loss function by adjusting model parameters.                      |
-| **Outliers**                        | Anomalies, Noise                            | Data points that are significantly different from other data points in the dataset.                |
-| **Overfitting**                     | High Bias                                   | A situation where the model learns the training data too well, including noise, and performs poorly on new data. |
-| **Pipeline**                        | Workflow                                    | A series of steps or stages in a machine learning workflow to automate the model training process.  |
-| **Regularization**                  | Penalty Term                                | A technique used to prevent overfitting by adding a penalty term to the loss function.              |
-| **Robustness**                      | -                                            | The ability of a model to maintain its performance despite changes in the data or environment.      |
-| **Sigmoid**                         | Logistic Sigmoid                            | A mathematical function often used in binary classification models to produce probabilities.        |
-| **Softmax**                         | Exponential Normalizer                       | A function that converts a vector of raw scores into a probability distribution in multi-class classification. |
-| **Standardization**                 | Z-Score Normalization                       | The process of rescaling features to have zero mean and unit variance, often used in machine learning. |
-| **Succinct**                        | -                                            | Clear and concise, typically referring to explanations or models.                                   |
-| **Test Set**                        | Test Data, Evaluation Data                  | A subset of the data used to evaluate the model after training to assess its performance.          |
-| **Training**                        | Learning, Fitting                           | The process of using data to adjust the model’s parameters.                                       |
-| **Training Procedure**              | Learning Pipeline                           | The series of steps involved in training a machine learning model, including data handling and optimization. |
-| **Training Set**                    | Training Data, Learning Data               | The portion of the data used to train the model.                                                   |
-| **Validation Set**                  | Dev Set                                     | A subset of data used to tune model parameters and evaluate performance during training.            |
-| **Variance**                        | Random Error                                | The amount by which the model's predictions would change if trained on a different dataset.        |
-| **Verbose**                         | -                                            | Opposite to Verbose.        |
-| **Version Control**                 | Git, Model Versioning                       | The practice of tracking changes to models or code, often using tools like Git.                    |
+| **Algorithm**                       | -                                            | A step-by-step procedure or formula used for calculations and problem-solving, often used in model training. |
+| **Anomaly Detection**               | Outlier Detection                            | The process of identifying rare or unusual patterns in data that do not conform to expected behavior. |
+| **API (Application Programming Interface)** | -                                            | A set of rules that allows one software application to communicate with another. |
+| **API Endpoint**                    | Model Interface                              | A specific URL or address where an API can access resources or services. |
+| **Bias**                            | Systematic Error                             | A systematic error in the model that leads to inaccurate predictions due to incorrect assumptions. |
+| **Bias and Variance**               | -                                            | Bias refers to errors from incorrect assumptions in the model, and variance refers to the model's sensitivity to small changes in data. |
+| **Confusion Matrix**                | Error Matrix                                 | A table used to evaluate the performance of a classification model, showing true vs predicted values. |
+| **Confusion Matrix Metrics**        | Precision, Recall                            | Metrics used to evaluate classification models, derived from a confusion matrix. |
+| **Cross-validation**                | -                                            | A technique for assessing the performance of a model by splitting the data into several subsets. |
+| **Dockerization**                   | Containerization for ML Models               | The process of packaging an application and its dependencies into a container for easy deployment. |
+| **Early Stopping**                  | Halting Criterion                            | A regularization technique that stops training when performance on a validation set starts to degrade. |
+| **Epoch**                           | Iteration                                    | A single pass through the entire training dataset in an iterative model training process. |
+| **Evaluation**                      | Testing, Assessment                          | The process of assessing a model's performance using various metrics. |
+| **Examples, Instances, Observations** | -                                            | Refers to individual data points or records used in machine learning tasks. |
+| **F1 Score**                        | F-Measure                                    | A metric that balances precision and recall, useful in imbalanced class problems. |
+| **Feature Importance**              | Variable Importance                          | A technique that identifies the most important features contributing to the model’s predictions. |
+| **Feature Selection**               | Attribute Selection                           | The process of selecting a subset of relevant features for use in model training. |
+| **Features**                        | Attributes, Input, Predictor Variable, Response Variables | A technique that identifies the most important features contributing to the model’s predictions. Features refer to characteristics such as "Form," "Shape," and "Proportion," while attributes refer to specific "Characteristics" or "Qualities." |
+| **Framework (TensorFlow, PyTorch, Keras)** | -                                            | Pre-built libraries and tools that assist in developing machine learning models. |
+| **Hyperparameters**                 | Tuning Parameters                            | Parameters that control the training process and model architecture, set before training begins. |
+| **Inference**                       | Prediction, Output                           | The process of making predictions using a trained model on new, unseen data. |
+| **Labels**                          | Targets, Outputs, Dependent Variables, Response Variables, answer, result, concept, ground truth | The target values or outcomes that the model is trying to predict in supervised learning tasks. |
+| **Learning Methods**                | -                                            | Refers to the approaches or techniques used to train models, such as supervised, unsupervised, or reinforcement learning. |
+| **Learning Rate**                   | Step Size                                    | A hyperparameter that controls how much the model's weights are adjusted during training. |
+| **Loss Function**                   | Cost Function, Objective Function            | A function that calculates the difference between the model's predictions and the true values. |
+| **Machine Learning Model and Pipeline** | -                                            | A collection of algorithms and workflows used to train and deploy machine learning models. |
+| **Metrics**                         | Performance Metrics, Evaluation Criteria                          | Quantitative measures used to assess model performance during evaluation. |
+| **Model Architecture**              | Network Structure                            | The structure or design of a machine learning model, including its layers and their configuration. |
+| **Model Hyperparameters**           | Learning Rate, Epochs                        | The parameters that are set before the training of the model, such as the learning rate and epochs. |
+| **Model Output**                    | Prediction, Inference                        | The result produced by the model after making a prediction. |
+| **Model Serialization**             | Model Saving, Pickling                       | The process of saving a trained model so that it can be reused or deployed later. |
+| **Model Setup**                     | Architecture, Hyperparameters                | The initial configuration and setup of a machine learning model, including architecture and hyperparameters. |
+| **Model Testing**                   | Cross-validation, Metrics Evaluation          | The process of evaluating the model using a test dataset or cross-validation. |
+| **Model Versioning**                | Model Management                             | The practice of keeping track of different versions of models as they evolve. |
+| **Normalization**                   | Standardization                               | The process of scaling features so that they have a mean of 0 and a standard deviation of 1. |
+| **Optimizer**                       | Optimization Algorithm                        | An algorithm used to minimize the loss function by adjusting model parameters. |
+| **Outliers**                        | Anomalies, Noise                              | Data points that are significantly different from other data points in the dataset. |
+| **Overfitting**                     | High Bias                                      | A situation where the model learns the training data too well, including noise, and performs poorly on new data. |
+| **Overfit and Underfit**            | -                                            | Overfitting occurs when a model learns the training data too well, while underfitting happens when the model is too simple. |
+| **Pipeline**                        | Workflow                                        | A series of steps or stages in a machine learning workflow to automate the model training process. |
+| **Prediction**                      | -                                            | The output of a machine learning model, typically a forecast or classification based on input data. |
+| **Regularization**                  | Penalty Term                                   | A technique used to prevent overfitting by adding a penalty term to the loss function. |
+| **Robustness**                      | -                                            | The ability of a model to maintain its performance despite changes in the data or environment. |
+| **Sigmoid**                         | Logistic Sigmoid                               | A mathematical function often used in binary classification models to produce probabilities. |
+| **Softmax**                         | Exponential Normalizer                          | A function that converts a vector of raw scores into a probability distribution in multi-class classification. |
+| **Standardization**                 | Z-Score Normalization                          | The process of rescaling features to have zero mean and unit variance, often used in machine learning. |
+| **Succinct**                        | -                                            | Clear and concise, typically referring to explanations or models. |
+| **Test Set**                        | Test Data, Evaluation Data                     | A subset of the data used to evaluate the model after training to assess its performance. |
+| **Train/Fit Model**                 | -                                            | The process of training a machine learning model by fitting it to a training dataset. |
+| **Train, Validation, Test Sets**    | -                                            | The datasets used for training, tuning (validation), and evaluating (test) a machine learning model. |
+| **Training**                        | Learning, Fitting                              | The process of using data to adjust the model’s parameters. |
+| **Training Procedure**              | Learning Pipeline                               | The series of steps involved in training a machine learning model, including data handling and optimization. |
+| **Training Set**                    | Training Data, Learning Data                   | The portion of the data used to train the model. |
+| **Validation Set**                  | Dev Set                                          | A subset of data used to tune model parameters and evaluate performance during training. |
+| **Variance**                        | Random Error                                    | The amount by which the model's predictions would change if trained on a different dataset. |
+| **Verbose**                         | -                                            | Opposite to Verbose. |
+| **Version Control**                 | Git, Model Versioning                           | The practice of tracking changes to models or code, often using tools like Git. |
 
 <br>
 
@@ -206,26 +217,9 @@ Include a section detailing the project's license. This clarifies the terms unde
 
 <br>
 
-## Common ML-algorithms
-
-| Algorithm                  | Type of Learning          | Type of Problem        | Hyperparameters & Guidelines                           | Evaluation Frequency & Guidelines                                    | Evaluation Methods                                         |
-|----------------------------|---------------------------|------------------------|--------------------------------------------------------|--------------------------------------------------------------------|------------------------------------------------------------|
-| **Linear Regression**       | Supervised                | Regression             | Learning Rate: 0.01 - 0.1; Regularization: 0.01 - 1.0 | After each run, check R²; Adjust learning rate if needed.         | R², Mean Squared Error (MSE)                               |
-| **Logistic Regression**     | Supervised                | Classification          | Learning Rate: 0.01 - 0.1; Regularization: 0.01 - 1.0 | After each run, evaluate accuracy; Adjust regularization if overfitting occurs. | Accuracy, Precision, Recall, F1-Score, Confusion Matrix   |
-| **Random Forest**           | Supervised                | Classification/Regression | n_estimators: 50 - 200; max_depth: 10 - 50; min_samples_split: 2 - 10 | Evaluate after 50-100 trees; Adjust `n_estimators` and `max_depth` based on performance. | Accuracy, Confusion Matrix, Feature Importance            |
-| **k-Nearest Neighbors (kNN)** | Supervised                | Classification/Regression | k: 3 - 20; distance metric: Euclidean or Manhattan     | After 10-20 evaluations, adjust k; Test different distance metrics. | Accuracy, Confusion Matrix, F1-Score                      |
-| **Support Vector Machine (SVM)** | Supervised            | Classification/Regression | C: 1 - 100; Kernel: linear, radial; Gamma: 0.01 - 0.1  | Evaluate after every run; Adjust `C` and `gamma` if needed.        | Accuracy, Precision, Recall, F1-Score, Confusion Matrix   |
-| **Decision Trees**          | Supervised                | Classification/Regression | max_depth: 5 - 20; min_samples_split: 2 - 10            | After each model, adjust tree depth or minimum samples for better generalization. | Accuracy, Confusion Matrix, Feature Importance            |
-| **AdaBoost**                | Supervised                | Classification/Regression | n_estimators: 50 - 200; learning_rate: 0.01 - 0.1     | Evaluate after 50-100 runs, adjust `n_estimators` or `learning_rate` if necessary. | Accuracy, F1-Score, Confusion Matrix                      |
-| **k-Means Clustering**      | Unsupervised              | Clustering             | k: 2 - 10; max_iter: 100 - 300; initialization: k-means++ | Evaluate cluster cohesion; Re-run with different `k` values if the results are not meaningful. | Silhouette Score, Davies-Bouldin Index, Elbow Method     |
-| **DBSCAN**                  | Unsupervised              | Clustering             | eps: 0.5 - 1.0; min_samples: 5 - 50                     | Evaluate clustering by visualizing the clusters; Adjust `eps` and `min_samples` if necessary. | Silhouette Score, Davies-Bouldin Index, Visual Inspection |
-| **Hierarchical Clustering** | Unsupervised              | Clustering             | Linkage: Ward, single, complete; n_clusters: 2 - 10     | Evaluate cluster dendrogram and optimal number of clusters.       | Dendrogram, Silhouette Score, Davies-Bouldin Index       |
-
-<br>
-
 ## Common evaluation methods of ML-algorithms
 
-| Evaluation Type          | Evaluation Method        | Description/Equation                                          | Typical Usage                   |
+| **Evaluation Type**          | **Evaluation Method**        | **Description/Equation**                                          | **Typical Usage**                   |
 |--------------------------|--------------------------|---------------------------------------------------------------|---------------------------------|
 | **Regression**            | **R² (Coefficient of Determination)** | Measures the proportion of variance in the dependent variable explained by the model. $ R² = 1 - \frac{SS_{res}}{SS_{tot}} $ | Linear Regression, Decision Trees (regression), etc. |
 | **Regression**            | **Mean Squared Error (MSE)** | Average of the squared differences between predicted and actual values. $ MSE = \frac{1}{n}\sum (y_{true} - y_{pred})^2 $ | Linear Regression, Random Forest (regression) |
@@ -241,6 +235,28 @@ Include a section detailing the project's license. This clarifies the terms unde
 | **Classification/Regression** | **Log-Loss (Cross-Entropy)** | Measures the performance of a classification model where predictions are probabilities. $ LogLoss = -\frac{1}{n}\sum y_i \log(p_i) + (1 - y_i) \log(1 - p_i) $ | Logistic Regression, Neural Networks, Random Forest |
 | **Regression**            | **Root Mean Squared Error (RMSE)** | Square root of the average squared differences between predicted and actual values. $ RMSE = \sqrt{\frac{1}{n} \sum (y_{true} - y_{pred})^2} $ | Linear Regression, Random Forest (regression) |
 | **Classification**        | **AUC-ROC**              | Area Under the ROC Curve, measures model performance across all classification thresholds. | Logistic Regression, Random Forest, SVM |
+
+<br>
+
+
+## Common ML-algorithms
+
+<br>
+
+| **Algorithm**             | **Type of Learning** | **Type of Problem**       | **Hyperparameters & Guidelines**                                      | **Objective Function (Loss + Optimization)**    | **Optimization Routine**            | **Evaluation Frequency & Guidelines**                      | **Evaluation Methods**                                        |
+|-----------------------|------------------|-----------------------|--------------------------------------------------------------------|-------------------------------------------|----------------------------------|---------------------------------------------------------|----------------------------------------------------------|
+| **Linear Regression**     | Supervised       | Regression            | Learning Rate: 0.01 - 0.1; Regularization: 0.01 - 1.0            | Minimize Mean Squared Error (MSE)         | Gradient Descent                 | After each run, check R²; Adjust learning rate if needed. | R², Mean Squared Error (MSE)                            |
+| **Logistic Regression**   | Supervised       | Classification        | Learning Rate: 0.01 - 0.1; Regularization: 0.01 - 1.0            | Minimize Cross-Entropy Loss              | Gradient Descent                 | After each run, evaluate accuracy; Adjust regularization if overfitting occurs. | Accuracy, Precision, Recall, F1-Score, Confusion Matrix |
+| **Random Forest**         | Supervised       | Classification/Regression | n_estimators: 50 - 200; max_depth: 10 - 50; min_samples_split: 2 - 10 | Minimize Gini Impurity or MSE            | Randomization, Decision Trees    | Evaluate after 50-100 trees; Adjust n_estimators and max_depth based on performance. | Accuracy, Confusion Matrix, Feature Importance           |
+| **k-Nearest Neighbors (kNN)** | Supervised     | Classification/Regression | k: 3 - 20; distance metric: Euclidean or Manhattan                  | Minimize error (distance-based, no explicit loss) | N/A (No optimization routine)   | After 10-20 evaluations, adjust k; Test different distance metrics. | Accuracy, Confusion Matrix, F1-Score                    |
+| **Support Vector Machine (SVM)** | Supervised | Classification/Regression | C: 1 - 100; Kernel: linear, radial; Gamma: 0.01 - 0.1             | Minimize Hinge Loss                      | Gradient Descent, Sequential Minimal Optimization (SMO) | Evaluate after every run; Adjust C and gamma if needed. | Accuracy, Precision, Recall, F1-Score, Confusion Matrix  |
+| **Decision Trees**        | Supervised       | Classification/Regression | max_depth: 5 - 20; min_samples_split: 2 - 10                        | Minimize Gini Impurity or MSE            | Decision Tree Splitting          | After each model, adjust tree depth or minimum samples for better generalization. | Accuracy, Confusion Matrix, Feature Importance           |
+| **AdaBoost**              | Supervised       | Classification/Regression | n_estimators: 50 - 200; learning_rate: 0.01 - 0.1                  | Minimize Exponential Loss (AdaBoost loss) | AdaBoost algorithm (boosting)     | Evaluate after 50-100 runs, adjust n_estimators or learning_rate if necessary. | Accuracy, F1-Score, Confusion Matrix                    |
+| **k-Means Clustering**    | Unsupervised     | Clustering            | k: 2 - 10; max_iter: 100 - 300; initialization: k-means++           | Minimize intra-cluster variance (no explicit loss function) | Lloyd's Algorithm               | Evaluate cluster cohesion; Re-run with different k values if the results are not meaningful. | Silhouette Score, Davies-Bouldin Index, Elbow Method   |
+| **DBSCAN**                | Unsupervised     | Clustering            | eps: 0.5 - 1.0; min_samples: 5 - 50                                 | Minimize cluster density (no explicit loss function) | Density-based clustering         | Evaluate clustering by visualizing the clusters; Adjust eps and min_samples if necessary. | Silhouette Score, Davies-Bouldin Index, Visual Inspection |
+| **Hierarchical Clustering** | Unsupervised    | Clustering            | Linkage: Ward, single, complete; n_clusters: 2 - 10                 | Minimize inter-cluster distance (no explicit loss function) | Agglomerative Clustering         | Evaluate cluster dendrogram and optimal number of clusters. | Dendrogram, Silhouette Score, Davies-Bouldin Index     |
+
+<br>
 
 <br>
 
