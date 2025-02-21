@@ -26,7 +26,9 @@ I have also, before the start of the real part of the README, created some reour
 5. GitHub will create a copy of the repository in your account. Wait a few moments for the process to complete.
 6. Once the fork is complete, you can navigate to your newly forked repository and begin working on your own copy.
 
-## Instructions on Versions of Dependencies
+## Instruction on the different files
+Not yet written
+### Instructions on Versions of Dependencies
 The listings in the `requirements.txt` file are provided without specific version numbers to ensure that you start with the latest versions of all dependencies (such as Python, Jupyter Notebook, Streamlit, Pandas, Scikit-learn, etc.). This approach allows you to always benefit from the most recent updates and improvements in the libraries.
 
 However, if you wish to "freeze" the versions throughout the project (which is often a good idea to prevent unexpected changes or issues caused by newer library versions), you should do the following:
