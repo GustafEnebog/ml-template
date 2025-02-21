@@ -1,4 +1,0 @@
-# you should list here the libraries you will use in the project
-streamlit
-altair<5
-# Install spellcheck!!!

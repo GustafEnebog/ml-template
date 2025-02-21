@@ -1,0 +1,27 @@
+# Development tools
+build-essential          # Essential tools for building packages
+python3-venv             # Python 3 virtual environment support
+python3-dev              # Python development headers (needed for compiling some Python packages)
+libatlas-base-dev        # Optimized linear algebra libraries (useful for numpy/scipy)
+libblas-dev              # Basic Linear Algebra Subprograms (BLAS) support for Python libraries
+liblapack-dev            # LAPACK libraries for advanced linear algebra (used by some ML libraries)
+gfortran                 # For compiling Fortran code (useful for some scientific packages)
+
+# Libraries for Python Data Science & ML
+libcurl4-openssl-dev     # Development libraries for curl, required by some ML packages (e.g. TensorFlow)
+libffi-dev               # Foreign Function Interface library (sometimes needed by Python packages)
+libssl-dev               # SSL libraries (sometimes needed by Python packages)
+zlib1g-dev               # Compression library (can be required for some Python modules)
+
+# System utilities
+git                      # Git version control
+curl                     # cURL command-line tool
+wget                     # Wget for downloading files
+
+# Other utilities
+nano                     # Text editor (for quick edits in Gitpod)
+vim                      # Another text editor option (optional)
+
+# Optional: For working with images and deep learning
+libjpeg-dev              # JPEG image libraries (useful for image processing libraries like PIL)
+libpng-dev               # PNG image libraries (for image processing)

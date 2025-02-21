@@ -1,40 +1,36 @@
 import streamlit as st
+from app_pages.multipage import MultiPage
 
-# Title of the App
+# Set up the page config (optional, but useful for customizing)
 st.set_page_config(
-    page_title="Data Driven Design Dashboard", 
-    page_icon="📊", 
-    layout="wide",
-    menu_items={'Get Help': None, 'Report a Bug': None, 'About': None}
+    page_title="Machine Learning Project App",  # Title of the app
+    page_icon="📊",  # Icon shown in the browser tab
+    layout="wide",  # Layout option, can be 'centered' or 'wide'
+    menu_items={
+        'Get Help': None,  # Optional menu item
+        'Report a Bug': None,  # Optional menu item
+        'About': "This is a machine learning project app that demonstrates various ML models."  # Customize the About section
+    }
 )
 
-# Sidebar logo and manual navigation
-st.sidebar.image("static/images-app/data_driven_design_logo_300.png", use_container_width=True)
+# load pages scripts
+from app_pages.page_1_summary_and_results import page_1_summary_and_results_body
+from app_pages.page_2_data_overview import page_2_data_overview_body
+from app_pages.page_3_problem_formulation_and_hypothesis import page_3_problem_formulation_and_hypothesis_body
+from app_pages.page_4_ml_regression import page_4_ml_regression_body
+from app_pages.page_5_ml_classification import page_5_ml_classification_body
+from app_pages.page_6_ml_clustering import page_6_ml_clustering_body
+from app_pages.page_7_conclusions_and_outlook import page_7_conclusions_and_outlook_body
 
-# Manually coded sidebar navigation
-menu = ["Summary and Results", "Data Overview", "Problem Formulation and Hypothesis", 
-        "Regression", "Classification", "Clustering", "Conclusions and Outlook"]
-choice = st.sidebar.radio("Select a Page", menu)
+app = MultiPage(app_name="Machine Learning Project App")  # Create an instance of the app 
 
-# Routing to the respective pages
-if choice == "Summary and Results":
-    import pages_no_auto_menu.page_1_summary_and_results
-    pages_no_auto_menu.page_1_summary_and_results.show_page()
-elif choice == "Data Overview":
-    import pages_no_auto_menu.page_2_data_overview
-    pages_no_auto_menu.page_2_data_overview.show_page()
-elif choice == "Problem Formulation and Hypothesis":
-    import pages_no_auto_menu.page_3_problem_formulation_and_hypothesis
-    pages_no_auto_menu.page_3_problem_formulation_and_hypothesis.show_page()
-elif choice == "Regression":
-    import pages_no_auto_menu.page_4_ml_regression
-    pages_no_auto_menu.page_4_ml_regression.show_page()
-elif choice == "Classification":
-    import pages_no_auto_menu.page_5_ml_classification
-    pages_no_auto_menu.page_5_ml_classification.show_page()
-elif choice == "Clustering":
-    import pages_no_auto_menu.page_6_ml_clustering
-    pages_no_auto_menu.page_6_ml_clustering.show_page()
-elif choice == "Conclusions and Outlook":
-    import pages_no_auto_menu.page_7_conclusions_and_outlook
-    pages_no_auto_menu.page_7_conclusions_and_outlook.show_page()
+# Add pages to the MultiPage app
+app.add_page("Summary and Results", page_1_summary_and_results_body)
+app.add_page("Data Overview", page_2_data_overview_body)
+app.add_page("Problem Formulation and Hypothesis", page_3_problem_formulation_and_hypothesis_body)
+app.add_page("ML Regression", page_4_ml_regression_body)
+app.add_page("ML Classification", page_5_ml_classification_body)
+app.add_page("ML Clustering", page_6_ml_clustering_body)
+app.add_page("Conclusions and Outlook", page_7_conclusions_and_outlook_body)
+
+app.run()  # Run the app
